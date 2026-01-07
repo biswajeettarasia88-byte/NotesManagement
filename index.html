@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Management Application</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="app">
+        <header class="app__header">
+            <h1 class="app__title">Note Management Application</h1>
+            <p class="app__subtitle">Create, manage, and delete notes efficiently</p>
+        </header>
+
+        <!-- Note Input -->
+        <section class="note-input">
+            <label for="noteText" class="visually-hidden">Note Content</label>
+            <textarea 
+                id="noteText" 
+                class="note-input__textarea" 
+                placeholder="Write your note here..."
+                aria-label="Note content"
+            ></textarea>
+
+            <button class="note-input__button" id="addNoteBtn">
+                Add Note
+            </button>
+
+            <p class="note-input__error" id="errorMessage">
+                Note content cannot be empty.
+            </p>
+        </section>
+
+        <!-- Notes List -->
+        <section class="notes" aria-live="polite">
+            <div class="notes__grid" id="notesGrid"></div>
+        </section>
+    </main>
+</body>
+</html>
